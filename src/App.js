@@ -5,6 +5,10 @@ import { NavBar } from "./components/common/NavBar";
 import { Home } from "./components/home/Home";
 import { SocialIcons } from "./components/common/SocialIcons";
 import { Contact } from "./components/contact/Contact";
+import { About } from "./components/about/About";
+import { CheckAlive } from "./components/common/CheckAlive";
+import { ProjectList } from "./components/projects/ProjectList";
+import { Articles } from "./components/articles/Articles";
 
 function App() {
   return (
@@ -19,7 +23,10 @@ function App() {
         <div>
           <SocialIcons />
         </div>
-
+        <div>
+          <CheckAlive/>
+        </div>
+        
         <Route exact path="/">
           <Home />
         </Route>
@@ -29,6 +36,18 @@ function App() {
 
         <Route exact path="/contacts">
           <Contact/>
+        </Route>
+
+        <Route exact path="/about">
+          <About />
+        </Route>
+
+        <Route exact path="/projects">
+          <ProjectList />
+        </Route>
+
+        <Route exact path="/articles">
+          <Articles />
         </Route>
       </Router>
     </div>

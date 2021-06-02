@@ -2,13 +2,76 @@
 import { useState } from "react";
 import tw, { css } from "twin.macro";
 import bgimg from "./background.jpg";
+import validator from "validator";
 
 export const Contact = (props) => {
   const [color, setColor] = useState("yellow");
   const [isloading, setLoading] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("abc@example.ext");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = () => {
-    setColor((prevColor) => "red");
+  const [reply, setReply] = useState(null);
+  const [error, setError] = useState(null);
+
+  const handleSubmit = (e) => {
+    //const abortController = new AbortController();
+    e.preventDefault();
+    if (isDefault(email)) {
+      return false;
+    }
+    const data = { name, email, subject, message };
+    var url = "/api/contact";
+    fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw Error("Did not get data from server");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setReply((prevReply) => data);
+        setLoading((prevLoading) => false);
+        setError((prevError) => null);
+        setEmail((prevEmail) => "abc@example.ext");
+        setMessage(prevMessage => "");
+        setName(prevName => "");
+        setSubject(prevSubject => ""); 
+      })
+      .catch((error) => {
+        if (error.name === "AbortError") {
+          console.log("aborted");
+        } else {
+          setLoading((prevLoading) => false);
+          setError((prevError) => error.message);
+        }
+      });
+  };
+
+  const isDefault = (email) => {
+    if (email === "abc@example.ext") {
+      setErrorMessage(
+        (prevErrorMessage) => "Please double check the email field"
+      );
+      return true;
+    }
+    return false;
+  };
+
+  const validateMail = (email) => {
+    if (validator.isEmail(email)) {
+      setColor((prevColor) => "yellow");
+    } else {
+      isDefault(email);
+      setColor((prevColor) => "red");
+      return false;
+    }
   };
 
   const background = css`
@@ -37,27 +100,36 @@ export const Contact = (props) => {
       border: 1px solid;
       border-color: ${color};
     }
-    ${tw`rounded bg-transparent bg-opacity-50 opacity-50 p-1.5 border border-gray-400
+    ${tw`rounded bg-transparent text-white bg-opacity-50 opacity-50 p-1.5 border border-gray-400
   `}
   `;
-  const button = css `${tw `px-2 py-1 mx-5 rounded-md text-white bg-transparent border-2 border-green-600
+  const button = css`
+    ${tw`px-2 py-1 mx-5 rounded-md text-white bg-transparent border-2 border-green-600
   hover:(bg-green-600 transition ease-in-out duration-700)
-  `}`
+  `}
+  `;
 
   return (
     <div
       className="main"
-      tw="absolute md:(grid grid-cols-4 items-center top-0 left-0 h-screen w-screen)"
+      tw="absolute md:(grid grid-cols-4 items-center) top-0 left-0 h-screen w-screen"
       css={background}
     >
       <div tw="col-start-2 col-end-4">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div tw="" css={inputsParent}>
             <label htmlFor="name" tw="" css={labels}>
               Name:
             </label>
             <span tw="" css={regularInputs}>
-              <input type="text" name="name"     css={inputs} required />
+              <input
+                type="text"
+                name="name"
+                css={inputs}
+                required
+                value={name}
+                onChange={(e) => setName((prevName) => e.target.value)}
+              />
             </span>
           </div>
 
@@ -66,7 +138,24 @@ export const Contact = (props) => {
               Email:
             </label>
             <span css={regularInputs}>
-              <input type="email" name="email" css={inputs} required />
+              <input
+                type="email"
+                name="email"
+                css={inputs}
+                required
+                value={email}
+                onFocus={(e) => {
+                  setEmail((prevEmail) => "");
+                  validateMail(email);
+                  setErrorMessage((prevErrorMessage) => "");
+                }}
+                onChange={(e) => {
+                  setEmail((prevEmail) => e.target.value);
+                  validateMail(email);
+                }}
+                onBlur={(e) => setColor((prevColor) => "yellow")}
+              />
+              <p tw="text-red-600">{errorMessage}</p>
             </span>
           </div>
 
@@ -75,7 +164,14 @@ export const Contact = (props) => {
               Subject:
             </label>
             <span css={regularInputs}>
-              <input type="text" name="subject" css={inputs} />
+              <input
+                type="text"
+                name="subject"
+                css={inputs}
+                required
+                value={subject}
+                onChange={(e) => setSubject((prevSubject) => e.target.value)}
+              />
             </span>
           </div>
 
@@ -89,12 +185,34 @@ export const Contact = (props) => {
                 cols="30"
                 rows="5"
                 css={inputs}
+                required
+                value={message}
+                onChange={(e) => setMessage((prevMessage) => e.target.value)}
               ></textarea>
             </span>
           </div>
+
           <div css={inputsParent} tw="justify-end">
-            {!isloading && <button onClick={handleSubmit} css={button}>Submit</button>}
-            {isloading && <button disabled css={button}>Loading ...</button>}
+            {!isloading && !error && !reply && (
+              <button css={button}>
+                Submit
+              </button>
+            )}
+            {isloading && (
+              <button disabled css={button}>
+                Sending ...
+              </button>
+            )}
+            {!isloading && !error && reply && (
+              <button css={button}>
+                {reply}
+              </button>
+            )}
+            {!isloading && error && !reply && (
+              <button css={button}>
+                {error}
+              </button>
+            )}
           </div>
         </form>
       </div>

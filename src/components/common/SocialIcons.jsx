@@ -9,6 +9,12 @@ export const SocialIcons = () => {
 
   return (
     <div tw="absolute top-0 right-0 flex items-end z-index[5]">
+      <span tw="place-self-center">
+        <p tw="text-white underline">Victor Mwangi</p>
+      </span>
+      <span tw="place-self-center pl-2">
+        <p tw="text-white underline">mwangivictor52@gmail.com</p>
+      </span>
       <div tw="m-3">
         <Link
           to="#"

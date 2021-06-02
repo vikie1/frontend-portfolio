@@ -6,7 +6,7 @@ export const NavBar = () => {
   return (
     <div tw="flex flex-grow-0 w-full py-12 transition ease-out duration-500">
       <nav tw=" rounded bg-white bg-opacity-0 z-index[5] bg-clip-padding">
-        <ul tw="mx-2">
+        <ul tw="mx-2 fixed">
           <li tw="pb-5 pt-5 z-index[5]">
             <Link to="/home" tw="">
               <span
