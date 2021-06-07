@@ -22,7 +22,7 @@ export const Contact = (props) => {
     if (isDefault(email)) {
       return false;
     }
-    const data = { name, email, subject, message };
+    const data = { name, email, subject, message};
     var url = "/api/contact";
     fetch(url, {
       method: "POST",
@@ -84,7 +84,7 @@ export const Contact = (props) => {
     background-blend-mode: color;
   `;
   const inputsParent = css`
-    ${tw`flex w-full h-auto`}
+    ${tw`flex w-screen md:(w-full) h-auto`}
   `;
   const labels = css`
     ${tw`align-self[flex-start] w-full p-5 text-white text-xl`}
@@ -100,7 +100,7 @@ export const Contact = (props) => {
       border: 1px solid;
       border-color: ${color};
     }
-    ${tw`rounded bg-transparent text-white bg-opacity-50 opacity-50 p-1.5 border border-gray-400
+    ${tw`rounded bg-transparent text-white bg-opacity-50 opacity-50 py-1.5 px-9 md:(p-1.5) border border-gray-400
   `}
   `;
   const button = css`
@@ -112,7 +112,7 @@ export const Contact = (props) => {
   return (
     <div
       className="main"
-      tw="absolute md:(grid grid-cols-4 items-center) top-0 left-0 h-screen w-screen"
+      tw="absolute flex items-center md:(grid grid-cols-4 items-center h-screen ) h-full top-0 left-0 w-screen"
       css={background}
     >
       <div tw="col-start-2 col-end-4">

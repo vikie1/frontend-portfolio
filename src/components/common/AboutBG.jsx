@@ -15,7 +15,7 @@ export const AboutBG = (props) => {
     ${tw `absolute`}`
 
     return (
-       <div className="" tw="absolute z-index[-2] top-0 left-0 h-screen w-screen grid grid-cols-2 grid-rows-2 overflow-hidden">
+       <div className="" tw="fixed z-index[-2] top-0 left-0 h-screen w-screen grid grid-cols-2 grid-rows-2 overflow-hidden">
            <div tw="col-start-1 col-end-2 row-start-1 row-end-2 bg-red-600" css={boxes}></div>
            <div tw="col-start-2 col-end-3 row-start-1 row-end-2 bg-blue-700" css={boxes}></div>
            <div tw="col-start-1 col-end-2 row-start-2 row-end-3 bg-purple-700" css={boxes}></div>

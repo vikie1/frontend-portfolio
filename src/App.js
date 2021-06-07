@@ -9,48 +9,48 @@ import { About } from "./components/about/About";
 import { CheckAlive } from "./components/common/CheckAlive";
 import { ProjectList } from "./components/projects/ProjectList";
 import { Articles } from "./components/articles/Articles";
+import { CookiesProvider } from "react-cookie";
 
 function App() {
   return (
-    <div
-      className="main"
-      tw="overflow-x-hidden block"
-    >
-      <Router>
-        <div>
-          <NavBar />
-        </div>
-        <div>
-          <SocialIcons />
-        </div>
-        <div>
-          <CheckAlive/>
-        </div>
-        
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/home">
-          <Home />
-        </Route>
+    <CookiesProvider>
+      <div className="main" tw="overflow-x-hidden block">
+        <Router>
+          <div>
+            <NavBar />
+          </div>
+          <div>
+            <SocialIcons />
+          </div>
+          <div>
+            <CheckAlive />
+          </div>
 
-        <Route exact path="/contacts">
-          <Contact/>
-        </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/home">
+            <Home />
+          </Route>
 
-        <Route exact path="/about">
-          <About />
-        </Route>
+          <Route exact path="/contacts">
+            <Contact />
+          </Route>
 
-        <Route exact path="/projects">
-          <ProjectList />
-        </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
 
-        <Route exact path="/articles">
-          <Articles />
-        </Route>
-      </Router>
-    </div>
+          <Route exact path="/projects">
+            <ProjectList />
+          </Route>
+
+          <Route exact path="/articles">
+            <Articles />
+          </Route>
+        </Router>
+      </div>
+    </CookiesProvider>
   );
 }
 

@@ -6,7 +6,7 @@ export const ProjectsData = (props) => {
   const projectList = props.projectList;
 
   const card = css`
-    ${tw`bg-gray-300 rounded overflow-hidden shadow-md relative hover:(shadow-xl)`}
+    ${tw`m-2 md:(m-0) bg-gray-300 rounded overflow-hidden shadow-md relative hover:(border-b-4 border-blue-600)`}
   `;
   const badge = css`
     ${tw`bg-gray-400 text-gray-800 text-xs font-bold uppercase rounded-full p-2 absolute top-0 ml-2 mt-2`}
@@ -16,13 +16,13 @@ export const ProjectsData = (props) => {
   return (
     <div tw="grid md:(grid-cols-3 gap-5 px-32) mt-8 w-full">
       {projectList.projects.map((project) => (
-        <div key={project.id} tw="inline" css={card}>
+        <div key={project.id} tw="inline cursor-pointer" css={card}>
           <Link to={`/project/${project.id}`}>
             <div>
               <img
                 src={process.env.PUBLIC_URL + project.imgUrl}
                 alt=""
-                tw="w-full h-32 md:(h-48) object-cover"
+                tw="w-full h-56 md:(h-48) object-cover"
               />
               <span css={badge}>
                 <p>{project.name}</p>

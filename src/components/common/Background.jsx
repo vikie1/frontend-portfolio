@@ -5,7 +5,7 @@ export const Background = (props) => {
   
   const spanWhole = css`
     ${tw`
-        absolute h-screen w-screen top-0 left-0 z-index[-1] overflow-x-hidden //background positioning
+        fixed h-full w-screen md:( h-screen absolute) top-0 left-0 z-index[-1] overflow-x-hidden //background positioning
         grid sm:(grid-cols-4 grid-rows-4) //background layout
         from-pink-500 via-blue-700 to-purple-700 bg-gradient-to-br //background colouring
     `}

@@ -45,7 +45,7 @@ export const CheckAlive = (props) => {
   };
 
   return (
-    <div tw="fixed bottom-0 left-0">
+    <div tw="fixed bg-transparent bottom-0 left-0 z-50">
       {!isAlive() && (
         <div>
           <div tw="absolute p-1 h-1 w-1 rounded-full bg-gray-700 bottom-0 left-0"></div>
