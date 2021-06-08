@@ -79,7 +79,7 @@ export const NewsList = (props) => {
                 <div>
                   <img
                     tw="w-full h-56 md:(h-48 w-full) object-cover"
-                    src={process.env.PUBLIC_URL + article.imgURL}
+                    src={article.imgURL}
                     alt=""
                   />
                   <span css={badge}>

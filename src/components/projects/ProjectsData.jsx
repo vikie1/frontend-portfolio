@@ -20,7 +20,7 @@ export const ProjectsData = (props) => {
           <Link to={`/project/${project.id}`}>
             <div>
               <img
-                src={process.env.PUBLIC_URL + project.imgUrl}
+                src={project.imgUrl}
                 alt=""
                 tw="w-full h-56 md:(h-48) object-cover"
               />
