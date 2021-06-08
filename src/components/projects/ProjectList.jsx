@@ -23,7 +23,15 @@ export const ProjectList = (props) => {
         </div>
 
         {projectList && <ProjectsData projectList={projectList} />}
-        {!projectList && !error && !isLoading && <div><p tw="text-6xl text-blue-700">Articles coming very soon, please be patient</p></div>}
+        {!projectList && !error && !isLoading && (
+          <div>
+            <p tw="text-6xl text-blue-700">
+              Projects coming very soon, please be patient <br /> In the mean
+              while visit my github repos{" "}
+              <a href="https://github.com/vikie1">here</a>
+            </p>
+          </div>
+        )}
       </main>
     </div>
   );
