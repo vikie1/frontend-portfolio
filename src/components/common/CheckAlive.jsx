@@ -37,7 +37,7 @@ export const CheckAlive = (props) => {
   const isAlive = () => {
     if (data) {
       const status = data.status;
-      if (status === "UP") {
+      if (status === "alive") {
         return true;
       }
       return false;

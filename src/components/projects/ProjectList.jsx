@@ -1,11 +1,9 @@
 /** @jsxImportSource @emotion/react */
-import { useState } from "react";
 import "twin.macro";
 import { useFetch } from "../../hooks/useFetch";
 import { ProjectsData } from "./ProjectsData";
 
 export const ProjectList = (props) => {
-  const [down, setDown] = useState(true);
   const {
     data: projectList,
     isLoading,
@@ -22,27 +20,22 @@ export const ProjectList = (props) => {
         <div tw="w-full place-self-center">
           {isLoading && <div>fetching data ...</div>}
           {error && (
-            <div>
-              Oops!! an error occurred. <br /> Don't freght it's not you
+            <div tw="mt-20 mx-32">
+              <p tw="text-3xl text-blue-700">
+                Projects coming very soon, please be patient <br /> In the mean
+                while visit my github repos{" "}
+                <a
+                  href="https://github.com/vikie1"
+                  tw="bg-blue-500 text-white font-style[italic]"
+                >
+                  here
+                </a>
+              </p>
             </div>
           )}
         </div>
 
-        {projectList && (
-          <div>
-            {setDown((prevDown) => false)}
-            <ProjectsData projectList={projectList} />
-          </div>
-        )}
-        {down && (
-          <div>
-            <p tw="text-6xl text-blue-700">
-              Projects coming very soon, please be patient <br /> In the mean
-              while visit my github repos{" "}
-              <a href="https://github.com/vikie1">here</a>
-            </p>
-          </div>
-        )}
+        {projectList && <ProjectsData projectList={projectList} />}
       </main>
     </div>
   );
