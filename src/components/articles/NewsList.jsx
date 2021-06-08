@@ -26,14 +26,32 @@ export const NewsList = (props) => {
   `;
   return (
     <div className="-view" tw="mt-10">
-      <main>
-        <article>
-          <h1 tw="text-center text-4xl md:(text-6xl) uppercase">{currArticle.name}</h1>
-          <div>
-            <p tw="mx-10 md:(mx-28)">{currArticle.fullArticle}</p>
-          </div>
-        </article>
-      </main>
+      {currArticle && (
+        <main>
+          <article>
+            <h1 tw="text-center text-4xl md:(text-6xl) uppercase">
+              {currArticle.name}
+            </h1>
+            <div>
+              <p tw="mx-10 md:(mx-28)">{currArticle.fullArticle}</p>
+            </div>
+          </article>
+        </main>
+      )}
+      {!currArticle && (
+        <div tw="mt-20 mx-32">
+          <p tw="text-3xl text-blue-700">
+            Articles coming very soon, please be patient <br /> In the mean
+            while visit my github repos{" "}
+            <a
+              href="https://github.com/vikie1"
+              tw="bg-blue-500 text-white font-style[italic]"
+            >
+              here
+            </a>
+          </p>
+        </div>
+      )}
       <div tw="w-screen border-t rounded box-shadow[0px -10px 10px -10px rgba(0, 0, 0, 0.8)]">
         <section tw="flex justify-center">
           {!isCollapsed && (

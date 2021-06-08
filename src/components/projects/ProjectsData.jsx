@@ -12,7 +12,6 @@ export const ProjectsData = (props) => {
     ${tw`bg-gray-400 text-gray-800 text-xs font-bold uppercase rounded-full p-2 absolute top-0 ml-2 mt-2`}
   `;
 
-
   return (
     <div tw="grid md:(grid-cols-3 gap-5 px-32) mt-8 w-full">
       {projectList.projects.map((project) => (
@@ -35,6 +34,20 @@ export const ProjectsData = (props) => {
           </Link>
         </div>
       ))}
+      {!projectList.proj && (
+        <div tw="mt-20 mx-32">
+          <p tw="text-3xl text-blue-700">
+            Projects coming very soon, please be patient <br /> In the mean
+            while visit my github repos{" "}
+            <a
+              href="https://github.com/vikie1"
+              tw="bg-blue-500 text-white font-style[italic]"
+            >
+              here
+            </a>
+          </p>
+        </div>
+      )}
     </div>
   );
 };
