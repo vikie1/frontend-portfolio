@@ -26,9 +26,6 @@ function App() {
             <CheckAlive />
           </div>
 
-          <Route exact path="/">
-            <Home />
-          </Route>
           <Route exact path="/home">
             <Home />
           </Route>
@@ -47,6 +44,10 @@ function App() {
 
           <Route exact path="/articles">
             <Articles />
+          </Route>
+
+          <Route path="/">
+            <Home />
           </Route>
         </Router>
       </div>
