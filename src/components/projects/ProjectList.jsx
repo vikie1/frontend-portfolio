@@ -1,10 +1,16 @@
 /** @jsxImportSource @emotion/react */
+import { useState } from "react";
 import "twin.macro";
 import { useFetch } from "../../hooks/useFetch";
 import { ProjectsData } from "./ProjectsData";
 
 export const ProjectList = (props) => {
-  const { data: projectList, isLoading, error } = useFetch("/api/projects");
+  const [down, setDown] = useState(true);
+  const {
+    data: projectList,
+    isLoading,
+    error,
+  } = useFetch("https://pbvictor.herokuapp.com/api/projects");
 
   return (
     <div tw="absolute top-0 left-0 min-h-screen w-full bg-white">
@@ -22,8 +28,13 @@ export const ProjectList = (props) => {
           )}
         </div>
 
-        {projectList && <ProjectsData projectList={projectList} />}
-        {!projectList && !error && !isLoading && (
+        {projectList && (
+          <div>
+            {setDown((prevDown) => false)}
+            <ProjectsData projectList={projectList} />
+          </div>
+        )}
+        {down && (
           <div>
             <p tw="text-6xl text-blue-700">
               Projects coming very soon, please be patient <br /> In the mean

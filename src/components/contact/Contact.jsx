@@ -23,7 +23,7 @@ export const Contact = (props) => {
       return false;
     }
     const data = { name, email, subject, message};
-    var url = "/api/contact";
+    var url = "https://pbvictor.herokuapp.com/api/contact";
     fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
