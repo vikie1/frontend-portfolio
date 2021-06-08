@@ -35,10 +35,10 @@ export const ProjectsData = (props) => {
         </div>
       ))}
       {!projectList.proj && (
-        <div tw="mt-20 mx-32">
+        <div tw="w-max mt-20 mx-32">
           <p tw="text-3xl text-blue-700">
             Projects coming very soon, please be patient <br /> In the mean
-            while visit my github repos{" "}
+            while visit my github repos
             <a
               href="https://github.com/vikie1"
               tw="bg-blue-500 text-white font-style[italic]"
