@@ -34,7 +34,7 @@ export const Home = () => {
     }
   }
     ${tw`
-    bg-gray-50 m-2 md:(m-auto) bg-opacity-20 backdrop-filter backdrop-blur-lg //colour related styling
+    bg-gray-50 m-2 md:(m-auto bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg) bg-opacity-20 backdrop-filter backdrop-blur-lg //colour related styling
     p-2 rounded //display related styling
     `}
   `;
