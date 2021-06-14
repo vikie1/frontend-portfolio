@@ -16,7 +16,7 @@ export const ProjectsData = (props) => {
     <div tw="grid md:(grid-cols-3 gap-5 px-32) mt-8 w-full">
       {projectList.projects.map((project) => (
         <div key={project.id} tw="inline cursor-pointer" css={card}>
-          <Link to={`/project/${project.id}`}>
+          <a href={project.url}>
             <div>
               <img
                 src={project.imgUrl}
@@ -31,23 +31,9 @@ export const ProjectsData = (props) => {
               <h2 tw="font-bold">{project.title}</h2>
               <p tw="block text-gray-500 text-sm">{project.description}</p>
             </div>
-          </Link>
+          </a>
         </div>
       ))}
-      {!projectList.proj && (
-            <div tw="col-start-1 col-end-3 w-full mt-20 mx-32">
-              <p tw="text-3xl text-blue-700">
-                Projects coming very soon, please be patient <br /> In the mean
-                while visit my github repos
-                <a
-                  href="https://github.com/vikie1"
-                  tw="bg-blue-500 text-white font-style[italic]"
-                >
-                  here
-                </a>
-              </p>
-            </div>
-          )}
     </div>
   );
 };

@@ -16,7 +16,6 @@ export const ProjectList = (props) => {
         <header tw="mt-16 md:(mt-auto) place-self-center font-extrabold text-gray-800 text-5xl uppercase border-b">
           my projects
         </header>
-
         <div tw="w-full place-self-center">
           {isLoading && <div>fetching data ...</div>}
           {error && (
