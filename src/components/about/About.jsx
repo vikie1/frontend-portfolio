@@ -18,7 +18,7 @@ export const About = (props) => {
 
   const cards = css`
     ${tw`
-    bg-gray-100 md:(bg-white  bg-opacity-10 backdrop-filter backdrop-blur-lg) bg-opacity-10 backdrop-filter backdrop-blur-lg //colour related styling
+    bg-gray-100 mb-5 md:(mb-auto bg-white  bg-opacity-10 backdrop-filter backdrop-blur-lg) bg-opacity-10 backdrop-filter backdrop-blur-lg //colour related styling
   p-2 rounded //display related styling
   `}
   `;
@@ -28,13 +28,13 @@ export const About = (props) => {
   `;
 
   return (
-    <div className="" tw="absolute top-0 left-0 h-full md:(h-screen) w-screen scroll-behavior[smooth]">
+    <div className="" tw="absolute top-0 left-0 height[max-content] min-h-full md:(h-screen) w-screen scroll-behavior[smooth]">
       <div className="background">
         <AboutBG />
       </div>
 
       <main
-        tw="relative h-full w-full flex flex-col justify-evenly md:(flex flex-col px-28 h-screen w-screen justify-around)"
+        tw="relative h-full w-full flex flex-col justify-evenly mt-16 md:(mt-auto flex-col px-28 h-screen w-screen justify-around)"
         css={texts}
       >
         <header tw="text-center">

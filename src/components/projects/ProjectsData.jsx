@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import tw, { css } from "twin.macro";
-import { Link } from "react-router-dom";
 
 export const ProjectsData = (props) => {
   const projectList = props.projectList;

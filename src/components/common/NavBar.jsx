@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const NavBar = () => {
 
   const padding = css `@media (max-width: 768px){
-    ${tw `p-1`}
+    ${tw `p-1 bg-gray-900 bg-opacity-25 mix-blend-hard-light backdrop-filter backdrop-blur-lg`}
   }`
 
   return (

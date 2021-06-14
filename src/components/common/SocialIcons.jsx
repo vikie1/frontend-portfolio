@@ -13,7 +13,7 @@ export const SocialIcons = () => {
         <span tw="place-self-center">
           <p tw="text-gray-200 underline">Victor Mwangi</p>
         </span>
-        <span tw="place-self-center pl-2">
+        <span tw="place-self-center pl-2 hidden md:(block)">
           <p tw="text-gray-200 underline">mwangivictor52@gmail.com</p>
         </span>
         <div tw="m-3">
