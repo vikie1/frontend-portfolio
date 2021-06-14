@@ -72,7 +72,7 @@ export const About = (props) => {
             </div>
             <div>
               <span>
-                <li>Pure React js Framework</li>
+                <li>Modern React js Framework (no class components)</li>
               </span>
             </div>
             <div>
