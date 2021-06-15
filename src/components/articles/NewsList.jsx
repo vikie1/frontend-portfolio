@@ -1,16 +1,17 @@
 /** @jsxImportSource @emotion/react */
 import tw, { css } from "twin.macro";
 import { useState } from "react";
-import collapse from "./cancel.svg";
-import up from "./up.svg";
+// import collapse from "./cancel.svg";
+// import up from "./up.svg";
 
 export const NewsList = (props) => {
   const articles = props.articles;
   const [currArticle, setCurrArticle] = useState(
     articles.blog[articles.blog.length - 1]
   );
-  const [isCollapsed, setIsCollapsed] = useState(false);
-  const [collapsed, setCollapsed] = useState(false);
+  //const [isCollapsed, setIsCollapsed] = useState(false);
+  // const [collapsed, setCollapsed] = useState(false);
+  const collapsed = false;
 
   console.log(currArticle);
   const currentArticle = (props) => {
@@ -55,8 +56,8 @@ export const NewsList = (props) => {
           </p>
         </div>
       )}
-      <div tw="w-screen border-t rounded box-shadow[0px -10px 10px -10px rgba(0, 0, 0, 0.8)]">
-        <section tw="flex justify-center">
+      <div tw="w-screen border-t rounded-md box-shadow[0px -10px 10px -10px rgba(0, 0, 0, 0.8)]">
+        {/* <section tw="flex justify-center">
           {!isCollapsed && (
             <div tw="bg-blue-50 rounded-full p-2 shadow-sm">
               <img
@@ -83,7 +84,7 @@ export const NewsList = (props) => {
               />
             </div>
           )}
-        </section>
+        </section> */}
 
         {!collapsed && (
           <div tw="grid md:(grid-cols-3 gap-5 px-32) mt-8 w-full">
