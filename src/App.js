@@ -14,7 +14,7 @@ import { CookiesProvider } from "react-cookie";
 function App() {
   return (
     <CookiesProvider>
-      <div className="main" tw="overflow-x-hidden block">
+      <div className="main" tw="overflow-x-hidden block font-family[-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif]">
         <Router>
           <div>
             <NavBar />

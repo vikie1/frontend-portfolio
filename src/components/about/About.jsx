@@ -34,7 +34,7 @@ export const About = (props) => {
       </div>
 
       <main
-        tw="relative h-full w-full flex flex-col justify-evenly mt-16 md:(mt-auto flex-col px-28 h-screen w-screen justify-around)"
+        tw="relative h-full w-full flex flex-col justify-evenly my-16 md:(my-auto flex-col px-28 h-screen w-screen justify-around)"
         css={texts}
       >
         <header tw="text-center">

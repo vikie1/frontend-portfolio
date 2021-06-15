@@ -22,7 +22,7 @@ export const Contact = (props) => {
     if (isDefault(email)) {
       return false;
     }
-    const data = { name, email, subject, message};
+    const data = { name, email, subject, message };
     var url = "https://pbvictor.herokuapp.com/api/contact";
     fetch(url, {
       method: "POST",
@@ -40,9 +40,9 @@ export const Contact = (props) => {
         setLoading((prevLoading) => false);
         setError((prevError) => null);
         setEmail((prevEmail) => "abc@example.ext");
-        setMessage(prevMessage => "");
-        setName(prevName => "");
-        setSubject(prevSubject => ""); 
+        setMessage((prevMessage) => "");
+        setName((prevName) => "");
+        setSubject((prevSubject) => "");
       })
       .catch((error) => {
         if (error.name === "AbortError") {
@@ -75,13 +75,15 @@ export const Contact = (props) => {
   };
 
   const background = css`
+    height: 100vh;
+    width: 100vw;
     background-position: center;
     background-image: url(${bgimg});
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-color: blue;
-    background-blend-mode: color;
+    background-blend-mode: color; 
   `;
   const inputsParent = css`
     ${tw`flex w-screen md:(w-full) h-auto`}
@@ -90,9 +92,12 @@ export const Contact = (props) => {
     ${tw`align-self[flex-start] w-full p-5 text-white text-xl`}
   `;
   const regularInputs = css`
-    ${tw`p-5 align-self[flex-end] `}
+    ${tw`p-3 align-self[flex-end] `}
   `;
 
+  // const large = css `
+  // @media (max-width: 350px)
+  // `
   const inputs = css`
     :focus {
       outline: none;
@@ -115,7 +120,7 @@ export const Contact = (props) => {
       tw="absolute flex items-center md:(grid grid-cols-4 items-center h-screen ) h-full top-0 left-0 w-screen"
       css={background}
     >
-      <div tw="col-start-2 col-end-4">
+      <div tw="w-auto md:(w-auto col-start-2 col-end-4)">
         <form onSubmit={handleSubmit}>
           <div tw="" css={inputsParent}>
             <label htmlFor="name" tw="" css={labels}>
@@ -177,7 +182,7 @@ export const Contact = (props) => {
 
           <div css={inputsParent}>
             <label htmlFor="message" css={labels}>
-              Message:
+              Text:
             </label>
             <span css={regularInputs}>
               <textarea
@@ -185,6 +190,7 @@ export const Contact = (props) => {
                 cols="30"
                 rows="5"
                 css={inputs}
+                tw="px-7 py-1"
                 required
                 value={message}
                 onChange={(e) => setMessage((prevMessage) => e.target.value)}
@@ -194,9 +200,7 @@ export const Contact = (props) => {
 
           <div css={inputsParent} tw="justify-end">
             {!isloading && !error && !reply && (
-              <button css={button}>
-                Submit
-              </button>
+              <button css={button}>Submit</button>
             )}
             {isloading && (
               <button disabled css={button}>
@@ -204,14 +208,10 @@ export const Contact = (props) => {
               </button>
             )}
             {!isloading && !error && reply && (
-              <button css={button}>
-                {reply}
-              </button>
+              <button css={button}>{reply}</button>
             )}
             {!isloading && error && !reply && (
-              <button css={button}>
-                {error}
-              </button>
+              <button css={button}>{error}</button>
             )}
           </div>
         </form>

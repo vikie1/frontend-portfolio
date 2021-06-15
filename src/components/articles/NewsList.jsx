@@ -25,13 +25,16 @@ export const NewsList = (props) => {
     ${tw`bg-gray-400 text-gray-800 text-xs font-bold uppercase rounded-full p-2 absolute top-0 ml-2 mt-2`}
   `;
   return (
-    <div className="-view" tw="mt-10">
+    <div className="-view" tw="mt-12 overflow-x-hidden">
       {currArticle && (
         <main>
           <article>
-            <h1 tw="text-center text-4xl md:(text-6xl) uppercase">
+            <h1 tw="text-center text-4xl md:(text-6xl) uppercase underline">
               {currArticle.name}
             </h1>
+            <div tw="w-full md:(flex justify-center) my-10">
+              <img src={currArticle.imgURL} alt="" srcset="" tw="w-full h-56 md:(max-h-56 w-5/12) object-cover"/>
+            </div>
             <div>
               <p tw="mx-10 md:(mx-28)">{currArticle.fullArticle}</p>
             </div>
