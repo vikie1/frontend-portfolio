@@ -34,7 +34,7 @@ export const NewsList = (props) => {
               {currArticle.name}
             </h1>
             <div tw="w-full md:(flex justify-center) my-10">
-              <img src={currArticle.imgURL} alt="" srcset="" tw="w-full h-56 md:(max-h-56 w-5/12) object-cover"/>
+              <img src={currArticle.imgURL} alt="" srcset="" tw="w-11/12 h-56 md:(max-h-56 w-5/12) object-cover"/>
             </div>
             <div>
               <p tw="mx-10 md:(mx-28)">{currArticle.fullArticle}</p>
