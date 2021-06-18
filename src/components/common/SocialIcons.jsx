@@ -3,13 +3,14 @@ import "twin.macro";
 import { Link } from "react-router-dom";
 import mail from "./gmail.svg";
 import twitter from "./tl.svg";
+import linkein from "./Linkedin.svg";
 
 export const SocialIcons = () => {
   const mailto = "mailto:mwangivictor52@gmail.com";
 
   return (
-    <div tw="absolute z-index[5]">
-      <div tw="fixed top-0 right-0 flex items-end">
+    <div tw="absolute top-0 right-0 z-index[5]">
+      <div tw="flex items-end">
         <span tw="place-self-center">
           <p tw="text-gray-200 underline">Victor Mwangi</p>
         </span>
@@ -30,6 +31,11 @@ export const SocialIcons = () => {
         <div tw="m-3">
           <a href="https://twitter.com/vikiemwangi">
             <img src={twitter} alt="twitter" tw="w-10" />
+          </a>
+        </div>
+        <div tw="m-3">
+          <a href="https://twitter.com/vikiemwangi">
+            <img src={linkein} alt="linkedin" tw="w-10" />
           </a>
         </div>
       </div>

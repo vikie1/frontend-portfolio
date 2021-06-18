@@ -57,7 +57,7 @@ export const Home = () => {
           tw="md:(col-start-2 col-end-3 self-center row-start-2 row-end-3)"
         >
           <header
-            tw="md:(bg-purple-300 bg-opacity-20 blur-3xl) text-center"
+            tw="md:(bg-purple-300 bg-opacity-20 blur-3xl mx-auto) bg-purple-300 bg-opacity-20 blur-3xl text-center mx-1"
             css={center}
           >
             <h1 tw="uppercase text-3xl text-white font-bold text-opacity-100">
@@ -82,7 +82,7 @@ export const Home = () => {
           </div>
         </div>
 
-        <div tw="md:(flex flex-col justify-end items-start col-start-3 col-end-4 row-start-1 row-end-2 w-max)">
+        <div tw="md:(flex flex-col justify-end items-start col-start-3 col-end-4 row-start-1 row-end-2 w-max mt-10)">
           <div className="second" tw="flex flex-col items-center" css={cards}>
             <img src={connected} alt="" tw="rounded-full h-20 w-20" />
             <span tw="text-white font-bold">

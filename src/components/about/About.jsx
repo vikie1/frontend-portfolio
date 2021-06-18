@@ -18,7 +18,7 @@ export const About = (props) => {
 
   const cards = css`
     ${tw`
-    bg-gray-100 mb-5 md:(mb-auto bg-white  bg-opacity-10 backdrop-filter backdrop-blur-lg) bg-opacity-10 backdrop-filter backdrop-blur-lg //colour related styling
+    bg-gray-100 mb-5 md:(mb-auto mx-auto bg-white  bg-opacity-10 backdrop-filter backdrop-blur-lg) bg-opacity-10 backdrop-filter backdrop-blur-lg //colour related styling
   p-2 rounded //display related styling
   `}
   `;
@@ -28,13 +28,16 @@ export const About = (props) => {
   `;
 
   return (
-    <div className="" tw="absolute top-0 left-0 height[max-content] min-h-full md:(h-screen) w-screen scroll-behavior[smooth]">
+    <div
+      className=""
+      tw="absolute top-0 left-0 height[max-content] min-h-full md:(h-screen overflow-hidden) overflow-x-hidden w-screen scroll-behavior[smooth]"
+    >
       <div className="background">
         <AboutBG />
       </div>
 
       <main
-        tw="relative h-full w-full flex flex-col justify-evenly my-16 md:(my-auto flex-col px-28 h-screen w-screen justify-around)"
+        tw="relative h-full w-full flex flex-col my-16 md:(my-auto mt-16 flex-col px-28 w-12/13)"
         css={texts}
       >
         <header tw="text-center">
@@ -43,7 +46,7 @@ export const About = (props) => {
           </h1>
         </header>
 
-        <section tw="place-self-center text-center" css={cards}>
+        <section tw="place-self-center text-center mt-5 mx-1" css={cards}>
           <h2 tw="uppercase underline font-extrabold">Education</h2>
           <div tw="flex items-center">
             <img src={grad} alt="" css={images} />
@@ -54,27 +57,26 @@ export const About = (props) => {
           </div>
         </section>
 
-        <section tw="place-self-center" css={cards}>
+        <section tw="place-self-center mx-2 md:(mx-auto)" css={cards}>
           <div>
             <span>
               <h2 tw="uppercase underline font-extrabold">
                 Proficient Development Technologies
               </h2>
             </span>
-
           </div>
 
           <ul css={list}>
-            <div>
+            {/* <div>
               <span>
                 <li>HTML/CSS and Javascript</li>
               </span>
-            </div>
-            <div>
+            </div> */}
+            {/* <div>
               <span>
                 <li>Modern React js Framework (no class components)</li>
               </span>
-            </div>
+            </div> */}
             <div>
               <span>
                 <li>Java Programing language</li>
@@ -108,26 +110,35 @@ export const About = (props) => {
             </div>
             <div>
               <span>
-                <li>
-                  Git, CLI and deployment of webapps and/or APIs
-                </li>
+                <li>Git, CLI and deployment of webapps and/or APIs</li>
               </span>
             </div>
             <div>
               <span>
-                <li>*nix/nix-like(mostly linux) systems and Ms-Windows(comfortable with CLI)</li>
+                <li>
+                  *nix/nix-like(mostly linux) systems and Ms-Windows(comfortable
+                  with CLI)
+                </li>
               </span>
             </div>
-            <div>
+            {/* <div>
               <span>
                 <li>
                   Tailwind css (Twin.macro and emotion when working with React)
                 </li>
               </span>
+            </div> */}
+            <div>
+              <span>
+                <li>Apache Tomcat</li>
+              </span>
             </div>
             <div>
               <span>
-                <li>Tomcat and NginX</li>
+                <li>
+                  HTML/CSS and Javascript(also learnt React)(not too much into
+                  this field though)
+                </li>
               </span>
             </div>
           </ul>

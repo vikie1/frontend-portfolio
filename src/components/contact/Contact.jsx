@@ -86,13 +86,13 @@ export const Contact = (props) => {
     background-blend-mode: color; 
   `;
   const inputsParent = css`
-    ${tw`flex w-screen md:(w-full) h-auto`}
+    ${tw`flex w-full md:(w-full) h-auto`}
   `;
   const labels = css`
     ${tw`align-self[flex-start] w-full p-5 text-white text-xl`}
   `;
   const regularInputs = css`
-    ${tw`p-3 align-self[flex-end] `}
+    ${tw`align-self[flex-end] justify-end mb-3`}
   `;
 
   // const large = css `
@@ -105,7 +105,7 @@ export const Contact = (props) => {
       border: 1px solid;
       border-color: ${color};
     }
-    ${tw`rounded bg-transparent text-white bg-opacity-50 opacity-50 py-1.5 px-9 md:(p-1.5) border border-gray-400
+    ${tw`rounded bg-transparent text-white bg-opacity-50 opacity-50 md:(p-1.5) border border-gray-400
   `}
   `;
   const button = css`
@@ -126,7 +126,7 @@ export const Contact = (props) => {
             <label htmlFor="name" tw="" css={labels}>
               Name:
             </label>
-            <span tw="" css={regularInputs}>
+            <span tw="p-3 " css={regularInputs}>
               <input
                 type="text"
                 name="name"
@@ -142,7 +142,7 @@ export const Contact = (props) => {
             <label htmlFor="email" css={labels}>
               Email:
             </label>
-            <span css={regularInputs}>
+            <span css={regularInputs} tw="p-3 ">
               <input
                 type="email"
                 name="email"
@@ -168,7 +168,7 @@ export const Contact = (props) => {
             <label htmlFor="subject" css={labels}>
               Subject:
             </label>
-            <span css={regularInputs}>
+            <span css={regularInputs} tw="p-3 ">
               <input
                 type="text"
                 name="subject"
@@ -184,13 +184,14 @@ export const Contact = (props) => {
             <label htmlFor="message" css={labels}>
               Text:
             </label>
-            <span css={regularInputs}>
+            <span css={regularInputs} tw="p-0">
               <textarea
                 name="message"
                 cols="30"
                 rows="5"
                 css={inputs}
-                tw="px-7 py-1"
+                //tw="px-7 py-0.5"
+                tw="px-0"
                 required
                 value={message}
                 onChange={(e) => setMessage((prevMessage) => e.target.value)}

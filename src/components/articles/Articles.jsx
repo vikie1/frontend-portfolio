@@ -30,8 +30,8 @@ export const Articles = (props) => {
         </div>
       )}
       {isLoading && (
-        <div>
-          <p tw="text-6xl text-green-400">Fetching articles ...</p>
+        <div tw="flex h-screen w-screen content-center items-center justify-center">
+          <p tw="text-6xl text-green-400 text-center">Fetching articles ...</p>
         </div>
       )}
       {articles && <NewsList articles={articles} />}
