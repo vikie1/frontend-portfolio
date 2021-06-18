@@ -33,7 +33,7 @@ export const NewsList = (props) => {
             <h1 tw="text-center text-4xl md:(text-6xl) uppercase underline">
               {currArticle.name}
             </h1>
-            <div tw="w-full md:(flex justify-center) my-10">
+            <div tw="w-full flex justify-center my-10">
               <img src={currArticle.imgURL} alt="" srcset="" tw="w-11/12 h-56 md:(max-h-56 w-5/12) object-cover"/>
             </div>
             <div>
