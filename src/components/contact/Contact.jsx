@@ -86,13 +86,13 @@ export const Contact = (props) => {
     background-blend-mode: color; 
   `;
   const inputsParent = css`
-    ${tw`flex w-full md:(w-full) h-auto`}
+    ${tw`flex w-screen md:(w-full) h-auto`}
   `;
   const labels = css`
     ${tw`align-self[flex-start] w-full p-5 text-white text-xl`}
   `;
   const regularInputs = css`
-    ${tw`align-self[flex-end] justify-end mb-3`}
+    ${tw`align-self[flex-end] mb-3`}
   `;
 
   // const large = css `
