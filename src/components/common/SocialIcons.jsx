@@ -34,7 +34,7 @@ export const SocialIcons = () => {
           </a>
         </div>
         <div tw="m-3">
-          <a href="https://twitter.com/vikiemwangi">
+          <a href="https://www.linkedin.com/in/victormwangi1">
             <img src={linkein} alt="linkedin" tw="w-10" />
           </a>
         </div>
