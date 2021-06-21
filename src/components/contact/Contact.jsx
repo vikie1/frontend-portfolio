@@ -17,13 +17,12 @@ export const Contact = (props) => {
   const [error, setError] = useState(null);
 
   const handleSubmit = (e) => {
-    //const abortController = new AbortController();
     e.preventDefault();
     if (isDefault(email)) {
       return false;
     }
     const data = { name, email, subject, message };
-    var url = "https://pbvictor.herokuapp.com/api/contact";
+    const url = "https://pbvictor.herokuapp.com/api/contact";
     fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
