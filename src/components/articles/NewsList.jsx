@@ -27,7 +27,7 @@ export const NewsList = (props) => {
   `;
   return (
     <div className="-view" tw="mt-12 overflow-x-hidden">
-      {currArticle && (
+      {/* {currArticle && (
         <main>
           <article>
             <h1 tw="text-center text-4xl md:(text-6xl) uppercase underline">
@@ -41,7 +41,7 @@ export const NewsList = (props) => {
             </div>
           </article>
         </main>
-      )}
+      )} */}
       {!currArticle && (
         <div tw="mt-20 mx-32">
           <p tw="text-3xl text-blue-700">
