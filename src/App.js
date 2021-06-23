@@ -51,7 +51,7 @@ function App() {
             <Article />
           </Route>
 
-          <Route path="/">
+          <Route exact path="*">
             <Home />
           </Route>
         </Router>
