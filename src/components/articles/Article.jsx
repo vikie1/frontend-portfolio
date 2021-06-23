@@ -1,4 +1,5 @@
-import React from "react";
+/** @jsxImportSource @emotion/react */
+import "twin.macro";
 import { useParams } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
 import { Link } from "react-router-dom";
@@ -15,7 +16,9 @@ export const Article = (props) => {
       <div className="-view">
         <main>
           <div>
-            <h1 tw="text-center text-4xl md:(text-6xl) uppercase underline">{name}</h1>
+            <h1 tw="text-center text-4xl md:(text-6xl) uppercase underline">
+              {name.replace(/-/g," ")}
+            </h1>
           </div>
           {isLoading && (
             <div tw="flex h-screen w-screen content-center items-center justify-center">
@@ -40,23 +43,21 @@ export const Article = (props) => {
           )}
           {blog && (
             <article>
-              <section>
-                <div tw="w-full flex justify-center my-10">
-                  <img
-                    src={blog.imgURL}
-                    alt=""
-                    srcset=""
-                    tw="w-11/12 h-56 md:(max-h-56 w-5/12) object-cover"
-                  />
-                </div>
-              </section>
-              <section>
-                <div>
-                  <p tw="mx-10 md:(mx-28)">{blog.fullArticle}</p>
-                </div>
-              </section>
+              <div tw="w-full flex justify-center my-10">
+                <img
+                  src={blog[0].imgURL}
+                  alt=""
+                  srcset=""
+                  tw="w-11/12 h-56 md:(max-h-56 w-5/12) object-cover"
+                />
+              </div>
               <div>
-                  <span><Link to="/about">Author: Victor Mwangi</Link></span>
+                <p tw="mx-10 md:(mx-28)">{blog[0].fullArticle}</p>
+              </div>
+              <div tw="flex w-screen justify-center">
+                <span tw="text-center">
+                  <Link to="/about">Author: Victor Mwangi</Link>
+                </span>
               </div>
             </article>
           )}

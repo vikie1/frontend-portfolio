@@ -14,6 +14,12 @@ export const NewsList = (props) => {
   const badge = css`
     ${tw`bg-gray-400 text-gray-800 text-xs font-bold uppercase rounded-full p-2 absolute top-0 ml-2 mt-2`}
   `;
+
+  const removeWhiteSpace = (name) => {
+      let x = name;
+      return x.replace(/ /g,"-");
+  }
+
   return (
     <div className="-view" tw="mt-12 overflow-x-hidden">
       {/* {currArticle && (
@@ -93,7 +99,7 @@ export const NewsList = (props) => {
         {!collapsed && (
           <div tw="grid md:(grid-cols-3 gap-5 px-32) mt-8 w-full">
             {articles.blog.map((article) => (
-              <Link to={`/article/${article.id}/${article.name}`}>
+              <Link to={`/article/${article.id}/${removeWhiteSpace(article.name)}`}>
                 <div tw="cursor-pointer inline" css={card} key={article.name}>
                   <div>
                     <img
