@@ -4,7 +4,7 @@ import { useFetch } from "../../hooks/useFetch";
 import { Link } from "react-router-dom";
 
 export const Article = (props) => {
-  const { name, id } = useParams();
+  const { id, name } = useParams();
   const {
     data: blog,
     isLoading,
@@ -15,7 +15,7 @@ export const Article = (props) => {
       <div className="-view">
         <main>
           <div>
-            <h1>{name}</h1>
+            <h1 tw="text-center text-4xl md:(text-6xl) uppercase underline">{name}</h1>
           </div>
           {isLoading && (
             <div tw="flex h-screen w-screen content-center items-center justify-center">
