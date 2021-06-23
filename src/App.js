@@ -51,7 +51,11 @@ function App() {
             <Article />
           </Route>
 
-          <Route exact path="*">
+          <Route exact path="/">
+            <Home />
+          </Route>
+
+          <Route path="*">
             <Home />
           </Route>
         </Router>
