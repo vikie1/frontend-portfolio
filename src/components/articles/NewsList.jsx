@@ -1,24 +1,13 @@
 /** @jsxImportSource @emotion/react */
 import tw, { css } from "twin.macro";
-import { useState } from "react";
+import { Link } from "react-router-dom";
 // import collapse from "./cancel.svg";
 // import up from "./up.svg";
 
 export const NewsList = (props) => {
   const articles = props.articles;
-  const [currArticle, setCurrArticle] = useState(
-    articles.blog[articles.blog.length - 1]
-  );
-  //const [isCollapsed, setIsCollapsed] = useState(false);
-  // const [collapsed, setCollapsed] = useState(false);
   const collapsed = false;
 
-  console.log(currArticle);
-  const currentArticle = (props) => {
-    const index = props;
-    console.log(index);
-    setCurrArticle((prevArticle) => articles.blog[index]);
-  };
   const card = css`
     ${tw`m-2 md:(m-0) bg-gray-300 rounded overflow-hidden shadow-md relative hover:(border-b-4 border-blue-600)`}
   `;
@@ -42,7 +31,22 @@ export const NewsList = (props) => {
           </article>
         </main>
       )} */}
-      {!currArticle && (
+      <main>
+        <article>
+          <h1 tw="text-center text-4xl md:(text-6xl) uppercase underline">
+            Get Articles on various topics (mostly on sring and the java
+            backend)
+          </h1>
+          <section>
+            <p>
+              Check out my twitter timeline for updates on articles. <br />
+              Feel free to rate my content, am ready to receive your feedback.
+              Some of the articles are show below.
+            </p>
+          </section>
+        </article>
+      </main>
+      {!articles && (
         <div tw="mt-20 mx-32">
           <p tw="text-3xl text-blue-700">
             Articles coming very soon, please be patient <br /> In the mean
@@ -88,31 +92,27 @@ export const NewsList = (props) => {
 
         {!collapsed && (
           <div tw="grid md:(grid-cols-3 gap-5 px-32) mt-8 w-full">
-            {articles.blog.map((article, index) => (
-              <div
-                tw="cursor-pointer inline"
-                css={card}
-                key={article.name}
-                onClick={(e) => {
-                  console.log(index);
-                  currentArticle(index);
-                }}
-              >
-                <div>
-                  <img
-                    tw="w-full h-56 md:(h-48 w-full) object-cover"
-                    src={article.imgURL}
-                    alt=""
-                  />
-                  <span css={badge}>
-                    <p>{article.topic}</p>
-                  </span>
+            {articles.blog.map((article) => (
+              <Link to={`/article/${article.name}`}>
+                <div tw="cursor-pointer inline" css={card} key={article.name}>
+                  <div>
+                    <img
+                      tw="w-full h-56 md:(h-48 w-full) object-cover"
+                      src={article.imgURL}
+                      alt=""
+                    />
+                    <span css={badge}>
+                      <p>{article.topic}</p>
+                    </span>
+                  </div>
+                  <div tw="m-2">
+                    <h2 tw="font-bold">{article.name}</h2>
+                    <p tw="block text-gray-500 text-sm">
+                      {article.description}
+                    </p>
+                  </div>
                 </div>
-                <div tw="m-2">
-                  <h2 tw="font-bold">{article.name}</h2>
-                  <p tw="block text-gray-500 text-sm">{article.description}</p>
-                </div>
-              </div>
+              </Link>
             ))}
           </div>
         )}

@@ -9,6 +9,7 @@ import { About } from "./components/about/About";
 import { CheckAlive } from "./components/common/CheckAlive";
 import { ProjectList } from "./components/projects/ProjectList";
 import { Articles } from "./components/articles/Articles";
+import { Article } from "./components/articles/Article";
 import { CookiesProvider } from "react-cookie";
 
 function App() {
@@ -46,7 +47,11 @@ function App() {
             <Articles />
           </Route>
 
-          <Route exact path="/">
+          <Route path="/article/:name">
+            <Article />
+          </Route>
+
+          <Route path="/">
             <Home />
           </Route>
         </Router>
