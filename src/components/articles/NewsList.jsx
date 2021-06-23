@@ -38,7 +38,7 @@ export const NewsList = (props) => {
             backend)
           </h1>
           <section>
-            <p>
+            <p tw="mx-10 mb-5 md:(mx-28)">
               Check out my twitter timeline for updates on articles. <br />
               Feel free to rate my content, am ready to receive your feedback.
               Some of the articles are show below.
@@ -93,7 +93,7 @@ export const NewsList = (props) => {
         {!collapsed && (
           <div tw="grid md:(grid-cols-3 gap-5 px-32) mt-8 w-full">
             {articles.blog.map((article) => (
-              <Link to={`/article/${article.name}`}>
+              <Link to={`/article/${article.id}/${article.name}`}>
                 <div tw="cursor-pointer inline" css={card} key={article.name}>
                   <div>
                     <img

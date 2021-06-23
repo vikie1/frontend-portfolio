@@ -4,12 +4,12 @@ import { useFetch } from "../../hooks/useFetch";
 import { Link } from "react-router-dom";
 
 export const Article = (props) => {
-  const { name } = useParams();
+  const { name, id } = useParams();
   const {
     data: blog,
     isLoading,
     error,
-  } = useFetch("https://pbvictor.herokuapp.com/api/blog/" + name);
+  } = useFetch("https://pbvictor.herokuapp.com/api/blog/" + id);
   return (
     <>
       <div className="-view">

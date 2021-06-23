@@ -47,7 +47,7 @@ function App() {
             <Articles />
           </Route>
 
-          <Route path="/article/:name">
+          <Route path="/article/:id/:name">
             <Article />
           </Route>
 
