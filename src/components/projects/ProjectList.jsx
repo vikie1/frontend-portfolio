@@ -12,7 +12,7 @@ export const ProjectList = (props) => {
 
   return (
     <div tw="absolute top-0 left-0 min-h-screen w-full bg-white">
-      <main tw="flex flex-col w-full mb-5">
+      <main tw="flex flex-col w-full mb-10">
         <header tw="mt-16 md:(mt-auto) place-self-center font-extrabold text-gray-800 text-5xl uppercase border-b">
           my projects
         </header>
