@@ -29,7 +29,7 @@ export const SocialIcons = () => {
           </Link>
         </div>
         <div tw="m-3">
-          <a href="https://twitter.com/vikiemwangi">
+          <a href="https://twitter.com/_victormwangi?s=09">
             <img src={twitter} alt="twitter" tw="w-10" />
           </a>
         </div>
