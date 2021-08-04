@@ -136,7 +136,7 @@ export const About = (props) => {
             <div>
               <span>
                 <li>
-                  HTML/CSS and Javascript(also learnt React and Tailwind Frameworks)
+                  HTML/CSS and Javascript(with React and Tailwind Frameworks)
                 </li>
               </span>
             </div>
