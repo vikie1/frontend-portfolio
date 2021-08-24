@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-/*This is a custom hook*/
+/*This hook will be used for all get requests*/
 export const useFetch = (url) => {
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(true);

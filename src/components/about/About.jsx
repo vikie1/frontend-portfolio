@@ -90,6 +90,20 @@ export const About = (props) => {
                 </li>
               </span>
             </div>
+            <div>
+              <span>
+                <li>
+                  HTML/CSS and Javascript(with React and Tailwind Frameworks)
+                </li>
+              </span>
+            </div>
+            <div>
+              <span>
+                <li>
+                  Android apps development with Java.
+                </li>
+              </span>
+            </div>
           </ul>
 
           <h3 tw="pt-2 uppercase underline font-bold">Worth Mentioning</h3>
@@ -131,13 +145,6 @@ export const About = (props) => {
             <div>
               <span>
                 <li>Apache Tomcat</li>
-              </span>
-            </div>
-            <div>
-              <span>
-                <li>
-                  HTML/CSS and Javascript(with React and Tailwind Frameworks)
-                </li>
               </span>
             </div>
           </ul>

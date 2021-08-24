@@ -3,6 +3,7 @@ import { useState } from "react";
 import tw, { css } from "twin.macro";
 import bgimg from "./background.jpg";
 import validator from "validator";
+import { useCookies } from "../../hooks/useCookies";
 
 export const Contact = (props) => {
   const [color, setColor] = useState("yellow");
@@ -15,6 +16,7 @@ export const Contact = (props) => {
 
   const [reply, setReply] = useState(null);
   const [error, setError] = useState(null);
+  const csrfToken = useCookies("XSRF-TOKEN");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,7 +27,10 @@ export const Contact = (props) => {
     const url = "https://pbvictor.herokuapp.com/api/contact";
     fetch(url, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { 
+        "Content-Type": "application/json",
+        "X-XSRF-TOKEN": csrfToken,
+       },
       body: JSON.stringify(data),
     })
       .then((res) => {
