@@ -10,7 +10,7 @@ import { CheckAlive } from "./components/common/CheckAlive";
 import { ProjectList } from "./components/projects/ProjectList";
 import { Articles } from "./components/articles/Articles";
 import { Article } from "./components/articles/Article";
-import { CookiesProvider } from "react-cookie";
+import { CookiesProvider } from 'react-cookie';
 
 function App() {
   return (
@@ -56,7 +56,7 @@ function App() {
           </Route>
         </Router>
       </div>
-    </CookiesProvider>
+      </CookiesProvider>
   );
 }
 

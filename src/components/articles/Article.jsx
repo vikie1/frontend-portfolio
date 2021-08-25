@@ -78,14 +78,14 @@ export const Article = (props) => {
                 </div>
                 <div tw="w-full flex justify-center my-10">
                   <img
-                    src={blog[0].imgURL}
+                    src={blog[0].currArticle[0].imgURL}
                     alt=""
                     srcset=""
                     tw="w-11/12 h-56 md:(max-h-56 w-5/12) object-cover"
                   />
                 </div>
                 <div>
-                  <p tw="px-10 md:(px-28)">{blog[0].fullArticle}</p>
+                  <p tw="px-10 md:(px-28)">{blog[0].currArticle[0].fullArticle}</p>
                 </div>
                 <div tw="flex w-screen justify-center">
                   <span tw="text-center text-blue-400 underline cursor-pointer">
