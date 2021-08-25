@@ -14,9 +14,6 @@ export const NewsList = (props) => {
   const card = css`
     ${tw`m-2 md:(m-0) bg-gray-300 rounded overflow-hidden shadow-md relative border-b-4 border-transparent hover:(border-blue-600)`}
   `;
-  const badge = css`
-    ${tw`bg-gray-400 text-gray-800 text-xs font-bold uppercase rounded-full p-2 absolute top-0 ml-2 mt-2`}
-  `;
 
   const H2 = styled.h2`
     ${tw`
@@ -90,9 +87,6 @@ export const NewsList = (props) => {
                       src={article.imgURL}
                       alt=""
                     />
-                    <span css={badge}>
-                      <p>{article.topic}</p>
-                    </span>
                   </div>
                   <div tw="ml-2 mt-2">
                     <h2 tw="font-bold">{article.name}</h2>
