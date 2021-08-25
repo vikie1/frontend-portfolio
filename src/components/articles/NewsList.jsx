@@ -42,9 +42,10 @@ export const NewsList = (props) => {
           </p>
         </div>
       )}
-      <div tw="w-full border-t rounded-md box-shadow[0px -10px 10px -10px rgba(0, 0, 0, 0.8)]">
-        <H2 tw="text-center">{heading}</H2>
-        {/* <section tw="flex justify-center">
+      {(articles.blog.length !== 0) && (
+        <div tw="w-full border-t rounded-md box-shadow[0px -10px 10px -10px rgba(0, 0, 0, 0.8)]">
+          <H2 tw="text-center">{heading}</H2>
+          {/* <section tw="flex justify-center">
           {!isCollapsed && (
             <div tw="bg-blue-50 rounded-full p-2 shadow-sm">
               <img
@@ -73,33 +74,36 @@ export const NewsList = (props) => {
           )}
         </section> */}
 
-        {!collapsed && (
-          <div tw="mt-8 w-full mb-5" css={cardBody}>
-            {articles.blog.map((article) => (
-              <Link
-                to={`/article/${article.id}/${removeWhiteSpace(article.name)}`}
-                css={cards}
-              >
-                <div tw="cursor-pointer" css={card} key={article.name}>
-                  <div>
-                    <img
-                      tw="w-full h-56 md:(h-48 w-full) object-cover"
-                      src={article.imgURL}
-                      alt=""
-                    />
+          {!collapsed && (
+            <div tw="mt-8 w-full mb-5" css={cardBody}>
+              {articles.blog.map((article) => (
+                <Link
+                  to={`/article/${article.id}/${removeWhiteSpace(
+                    article.name
+                  )}`}
+                  css={cards}
+                >
+                  <div tw="cursor-pointer" css={card} key={article.name}>
+                    <div>
+                      <img
+                        tw="w-full h-56 md:(h-48 w-full) object-cover"
+                        src={article.imgURL}
+                        alt=""
+                      />
+                    </div>
+                    <div tw="ml-2 mt-2">
+                      <h2 tw="font-bold">{article.name}</h2>
+                      <p tw="block text-gray-500 text-sm">
+                        {article.description}
+                      </p>
+                    </div>
                   </div>
-                  <div tw="ml-2 mt-2">
-                    <h2 tw="font-bold">{article.name}</h2>
-                    <p tw="block text-gray-500 text-sm">
-                      {article.description}
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        )}
-      </div>
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 };
