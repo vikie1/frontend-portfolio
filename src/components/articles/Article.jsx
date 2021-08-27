@@ -28,18 +28,42 @@ export const Article = (props) => {
   const header = "You will love this too";
 
   //specific blog body styles to match default  h2, h3, li, p, and strong
-  const H2 = styled.h2`
-    ${tw`
-  block font-size[1.5em] margin-bottom[0.83em] margin-top[0.83em] mx-0 font-bold
-  `}
-  `;
-  const H3 = styled.h3 `
-    ${tw`block font-size[1.17em] margin-bottom[1em] margin-top[1em] mx-0 font-bold`}
-  `;
-  const Li = styled.li `${tw`list-item list-disc`}`;
-  const P = styled.p `${tw`margin[1.12em 0]`}`
-  const Strong = styled.strong `${tw`font-weight[bolder]`}`
-  const link = css `${tw`text-blue-400 underline cursor-pointer italic`}`;
+  const blogStyle = css `h2{
+    ${tw`block font-size[1.5em] margin-bottom[0.83em] margin-top[0.83em] mx-0 font-bold`}
+  }
+  h3{
+    ${tw `block font-size[1.17em] margin-bottom[1em] margin-top[1em] mx-0 font-bold`}
+  }
+  li{
+    ${tw`list-item list-disc`}
+  }
+  p{
+    ${tw`margin[1.12em 0]`}
+  }
+  strong{
+    ${tw`font-weight[bolder]`}
+  }
+  a{
+    ${tw`text-blue-700 underline cursor-pointer italic`}
+  }
+  aside{
+    ${tw`w-full flex justify-center my-10`}
+  }
+  img{
+    ${tw`w-11/12 h-56 md:(max-h-56 w-5/12) object-cover place-self-center`}
+  }`;
+  // const H2 = styled.h2`
+  //   ${tw`
+  // block font-size[1.5em] margin-bottom[0.83em] margin-top[0.83em] mx-0 font-bold
+  // `}
+  // `;
+  // const H3 = styled.h3 `
+  //   ${tw`block font-size[1.17em] margin-bottom[1em] margin-top[1em] mx-0 font-bold`}
+  // `;
+  // const Li = styled.li `${tw`list-item list-disc`}`;
+  // const P = styled.p `${tw`margin[1.12em 0]`}`
+  // const Strong = styled.strong `${tw`font-weight[bolder]`}`
+  // const link = css `${tw`text-blue-400 underline cursor-pointer italic`}`;
 
   return (
     <>
@@ -85,7 +109,7 @@ export const Article = (props) => {
                   />
                 </div>
                 <div>
-                  <p tw="px-10 md:(px-28)">{blog.currArticle[0].fullArticle}</p>
+                  <article css={blogStyle} tw="px-10 md:(px-28)" dangerouslySetInnerHTML={{ __html: blog.currArticle[0].fullArticle }}></article>
                 </div>
                 <div tw="flex w-screen justify-center">
                   <span tw="text-center text-blue-400 underline cursor-pointer">
