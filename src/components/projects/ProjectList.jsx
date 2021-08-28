@@ -17,7 +17,7 @@ export const ProjectList = (props) => {
           my projects
         </header>
         <div tw="w-full place-self-center">
-          {isLoading && <div>fetching data ...</div>}
+          {isLoading && <div tw="text-center">fetching data ...</div>}
           {error && (
             <div tw="mt-20 mx-32">
               <p tw="text-3xl text-blue-700">

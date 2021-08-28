@@ -137,7 +137,7 @@ export const Articles = (props) => {
           <p tw="text-3xl text-blue-700">Fetching articles ...</p>
         </div>
       )}
-      <div tw="flex w-full">
+      <div tw="flex w-full mb-10 md:(mb-auto)">
         <aside>
           {articles && (
             <NewsList

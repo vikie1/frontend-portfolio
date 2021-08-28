@@ -11,8 +11,8 @@ export const NavBar = () => {
   return (
     <div tw="flex md:(flex flex-grow-0 w-max py-12 transition ease-out duration-500)">
       <nav tw="rounded fixed bg-transparent z-index[5]">
-        <ul tw="md:(mx-2 flex-col static w-max) fixed bottom-0 w-screen flex justify-evenly">
-          <li tw="pb-5 md:(pt-5) z-index[5]">
+        <ul tw="bg-gray-300 bg-opacity-25 backdrop-filter backdrop-blur-sm md:(bg-transparent mx-2 flex-col static w-max) fixed bottom-0 w-screen flex align-baseline justify-evenly">
+          <li tw="mt-5 pb-5 md:(pt-5 mt-auto) z-index[5]">
             <Link to="/home" tw="">
               <span
                 className="icons"
@@ -24,19 +24,19 @@ export const NavBar = () => {
             </Link>
           </li>
 
-          <li tw="pb-5">
+          <li tw="mt-5 pb-5 md:(mt-auto)">
             <Link to="/articles">
               <span
                 className="icons"
                 css={padding}
                 tw="border-2 border-gray-400 rounded md:(bg-gray-700 border-none hover:(bg-purple-400 border-2 border-gray-400) rounded-full)"
               >
-                Articles
+                Blogs
               </span>
             </Link>
           </li>
 
-          <li tw="pb-5">
+          <li tw="mt-5 pb-5 md:(mt-auto)">
             <Link to="/projects">
               <span
                 className="icons"
@@ -48,7 +48,7 @@ export const NavBar = () => {
             </Link>
           </li>
 
-          <li tw="pb-5">
+          <li tw="mt-5 pb-5 md:(mt-auto)">
             <Link to="/about">
               <span
                 className="icons"
@@ -60,14 +60,14 @@ export const NavBar = () => {
             </Link>
           </li>
 
-          <li tw="pb-5">
+          <li tw="mt-5 pb-5 md:(mt-auto)">
             <Link to="/contacts">
               <span
                 className="icons"
                 css={padding}
                 tw="border-2 border-pink-700 rounded md:(bg-pink-700 border-none hover:(bg-purple-400 border-2 border-pink-700) rounded-full)"
               >
-                Contacts
+                Contact
               </span>
             </Link>
           </li>
