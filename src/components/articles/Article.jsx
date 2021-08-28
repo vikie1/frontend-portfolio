@@ -96,7 +96,7 @@ export const Article = (props) => {
             <div tw="block md:(grid grid-cols-3) w-12/13 mb-10">
               <article tw="col-start-1 col-end-3">
                 <div>
-                  <h1 tw="mt-12 text-center px-10 md:(px-28 mt-auto) font-bold text-4xl uppercase underline">
+                  <h1 tw="mt-12 text-center px-10 md:(px-28 mt-auto) font-bold text-2xl uppercase underline">
                     {name.replace(/-/g, " ")}
                   </h1>
                 </div>

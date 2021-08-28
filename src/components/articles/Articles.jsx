@@ -51,7 +51,7 @@ export const Articles = (props) => {
         <div tw="md:(col-start-2 col-end-4)">
           <main tw="mt-12">
             <article>
-              <h1 tw="text-center px-10 md:(px-0 mt-auto) text-4xl uppercase underline">
+              <h1 tw="text-center px-10 md:(px-0 mt-auto) font-bold text-2xl uppercase underline">
                 Get articles on various programing and tech topics
               </h1>
             </article>
