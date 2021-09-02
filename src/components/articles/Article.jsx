@@ -51,6 +51,15 @@ export const Article = (props) => {
   }
   img{
     ${tw`w-11/12 h-56 md:(max-h-56 w-5/12) object-cover place-self-center`}
+  }
+  pre{
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0;
+  }
+  code{
+    font-family: monospace;
   }`;
   // const H2 = styled.h2`
   //   ${tw`
