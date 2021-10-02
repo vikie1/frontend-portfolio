@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import tw, { css } from "twin.macro";
-import { defaultCss } from "../../hooks/useDefaultCss";
+import { useDefaultCss } from "../../hooks/useDefaultCss";
 import { useParams } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
 import { Link } from "react-router-dom";
@@ -13,7 +13,6 @@ export const Article = (props) => {
     isLoading,
     error,
   } = useFetch("https://pbvictor.herokuapp.com/api/blog/" + id);
- 
 
   //fine tuned card layout tweaks to use in this component
   const cardBody = css`
@@ -22,14 +21,26 @@ export const Article = (props) => {
   const cards = css`
     ${tw`w-full sm:(w-80)`}
   `;
+
   const header = "You will love this too";
 
+  //use the defaultCss for blog content to edit with a word editor
+  const defaultStyles = useDefaultCss();
   //specific blog body styles
-  const blogStyle = css `
-  h2, h2, h4, h5, strong, bold{
-    ${tw`text-gray-700`}
-  }
-  img, video, iframe{${tw`self-center place-self-center`}}
+  const blogStyle = css`
+    h2,
+    h3,
+    h4,
+    h5,
+    strong,
+    bold {
+      ${tw`text-gray-700`}
+    }
+    img,
+    video,
+    iframe {
+      ${tw`self-center place-self-center mx-auto`}
+    }
   `;
 
   return (
@@ -76,7 +87,13 @@ export const Article = (props) => {
                   />
                 </div>
                 <div>
-                  <article css={[blogStyle, defaultCss]} tw="px-10 md:(px-28)" dangerouslySetInnerHTML={{ __html: blog.currArticle[0].fullArticle }}></article>
+                  <article
+                    css={[blogStyle, defaultStyles]}
+                    tw="px-10 md:(px-28)"
+                    dangerouslySetInnerHTML={{
+                      __html: blog.currArticle[0].fullArticle,
+                    }}
+                  ></article>
                 </div>
                 <div tw="flex w-screen justify-center">
                   <span tw="text-center text-blue-400 underline cursor-pointer">
@@ -97,7 +114,9 @@ export const Article = (props) => {
                   )}
                 </aside>
               </div>
+              {console.log(defaultStyles)}
             </div>
+          
           )}
         </main>
       </div>
