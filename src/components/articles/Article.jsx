@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
-import tw, { css, styled } from "twin.macro";
+import tw, { css } from "twin.macro";
+import { defaultCss } from "../../hooks/useDefaultCss";
 import { useParams } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
 import { Link } from "react-router-dom";
@@ -12,11 +13,7 @@ export const Article = (props) => {
     isLoading,
     error,
   } = useFetch("https://pbvictor.herokuapp.com/api/blog/" + id);
-  // const {
-  //   data: blog,
-  //   isLoading,
-  //   error,
-  // } = useFetch("http://localhost:8080/api/blog/" + id);
+ 
 
   //fine tuned card layout tweaks to use in this component
   const cardBody = css`
@@ -27,52 +24,13 @@ export const Article = (props) => {
   `;
   const header = "You will love this too";
 
-  //specific blog body styles to match default  h2, h3, li, p, and strong
-  const blogStyle = css `h2{
-    ${tw`block font-size[1.5em] margin-bottom[0.83em] margin-top[0.83em] mx-0 font-bold`}
+  //specific blog body styles
+  const blogStyle = css `
+  h2, h2, h4, h5, strong, bold{
+    ${tw`text-gray-700`}
   }
-  h3{
-    ${tw `block font-size[1.17em] margin-bottom[1em] margin-top[1em] mx-0 font-bold`}
-  }
-  li{
-    ${tw`list-item list-disc`}
-  }
-  p{
-    ${tw`margin[1.12em 0]`}
-  }
-  strong{
-    ${tw`font-weight[bolder]`}
-  }
-  a{
-    ${tw`text-blue-700 underline cursor-pointer italic`}
-  }
-  aside{
-    ${tw`w-full flex justify-center my-10`}
-  }
-  img{
-    ${tw`w-11/12 h-56 md:(max-h-56 w-5/12) object-cover place-self-center`}
-  }
-  pre{
-    display: block;
-    font-family: monospace;
-    white-space: pre;
-    margin: 1em 0;
-  }
-  code{
-    font-family: monospace;
-  }`;
-  // const H2 = styled.h2`
-  //   ${tw`
-  // block font-size[1.5em] margin-bottom[0.83em] margin-top[0.83em] mx-0 font-bold
-  // `}
-  // `;
-  // const H3 = styled.h3 `
-  //   ${tw`block font-size[1.17em] margin-bottom[1em] margin-top[1em] mx-0 font-bold`}
-  // `;
-  // const Li = styled.li `${tw`list-item list-disc`}`;
-  // const P = styled.p `${tw`margin[1.12em 0]`}`
-  // const Strong = styled.strong `${tw`font-weight[bolder]`}`
-  // const link = css `${tw`text-blue-400 underline cursor-pointer italic`}`;
+  img, video, iframe{${tw`self-center place-self-center`}}
+  `;
 
   return (
     <>
@@ -118,7 +76,7 @@ export const Article = (props) => {
                   />
                 </div>
                 <div>
-                  <article css={blogStyle} tw="px-10 md:(px-28)" dangerouslySetInnerHTML={{ __html: blog.currArticle[0].fullArticle }}></article>
+                  <article css={[blogStyle, defaultCss]} tw="px-10 md:(px-28)" dangerouslySetInnerHTML={{ __html: blog.currArticle[0].fullArticle }}></article>
                 </div>
                 <div tw="flex w-screen justify-center">
                   <span tw="text-center text-blue-400 underline cursor-pointer">
