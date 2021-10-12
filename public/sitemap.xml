@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://victormwangi.netlify.app/</loc>
+    <lastmod>2021-10-12</lastmod>
+  </url>
+  <url>
+    <loc>http://victormwangi.netlify.app/home</loc>
+    <lastmod>2021-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://victormwangi.netlify.app/articles</loc>
+    <lastmod>2021-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://victormwangi.netlify.app/projects</loc>
+    <lastmod>2021-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://victormwangi.netlify.app/about</loc>
+    <lastmod>2021-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://victormwangi.netlify.app/contacts</loc>
+    <lastmod>2021-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://victormwangi.netlify.app/article/65/Boost-your-react-and-tailwind-development-with-twin-macro.-</loc>
+    <lastmod>2021-10-12</lastmod>
+  </url>
+</urlset>
