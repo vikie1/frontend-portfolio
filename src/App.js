@@ -39,6 +39,10 @@ function App() {
             <About />
           </Route>
 
+          <Route exact path="/victor-mwangi">
+            <About />
+          </Route>
+
           <Route exact path="/projects">
             <ProjectList />
           </Route>
