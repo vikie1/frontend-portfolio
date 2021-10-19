@@ -13,11 +13,12 @@ export const ProjectsData = (props) => {
 
   return (
     <div tw="grid md:(grid-cols-3 gap-5 px-32) mt-8 w-full">
-      {projectList.projects.map((project) => (
+      {projectList.projects.foreach((project) => (
         <div key={project.id} tw="inline cursor-pointer" css={card}>
           <a href={project.url}>
             <div>
               <img
+                loading="lazy"
                 src={project.imgUrl}
                 alt=""
                 tw="w-full h-56 md:(h-48) object-cover"
