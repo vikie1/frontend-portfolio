@@ -95,7 +95,7 @@ export const Article = (props) => {
                     }}
                   ></article>
                 </div>
-                <div tw="flex w-screen justify-center">
+                <div tw="flex justify-center mt-1">
                   <span tw="text-center text-blue-400 underline cursor-pointer">
                     <Link to="/about">Author: Victor Mwangi</Link>
                   </span>

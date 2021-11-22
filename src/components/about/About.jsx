@@ -37,7 +37,7 @@ export const About = (props) => {
       </div>
 
       <main
-        tw="relative h-full w-full flex flex-col my-16 md:(my-auto mt-16 flex-col px-28 w-12/13)"
+        tw="relative h-full w-full flex flex-col justify-around my-16 md:(my-auto mt-16 flex-col px-28 w-12/13)"
         css={texts}
       >
         <header tw="text-center">
@@ -46,7 +46,7 @@ export const About = (props) => {
           </h1>
         </header>
 
-        <section tw="place-self-center text-center mt-5 mx-1" css={cards}>
+        <section tw="place-self-center text-center mt-2 mx-1" css={cards}>
           <h2 tw="uppercase underline font-extrabold">Education</h2>
           <div tw="flex items-center">
             <img src={grad} alt="" css={images} />
@@ -57,7 +57,11 @@ export const About = (props) => {
           </div>
         </section>
 
-        <section tw="place-self-center mx-2 md:(mx-auto)" css={cards}>
+        <section tw="place-self-center text-center mx-1">
+          <div css={cards}><a href="/Victor Mwangi.pdf" download>Resume</a></div>
+        </section>
+
+        <section tw="place-self-center mt-2 mx-2 md:(mx-auto)" css={cards}>
           <div>
             <span>
               <h2 tw="uppercase underline font-extrabold">
@@ -85,15 +89,14 @@ export const About = (props) => {
             <div>
               <span>
                 <li>
-                  Backend programing in Spring Boot,Spring Security,Spring JPA
-                  ...
+                  Backend programing in the Spring Framework including Spring Boot, Spring Security,Spring JPA and Hibernate
                 </li>
               </span>
             </div>
             <div>
               <span>
                 <li>
-                  HTML/CSS and Javascript(with React and Tailwind Frameworks)
+                  HTML/CSS and Javascript(with React, Tailwind Frameworks and Bootstrap)
                 </li>
               </span>
             </div>
@@ -135,13 +138,6 @@ export const About = (props) => {
                 </li>
               </span>
             </div>
-            {/* <div>
-              <span>
-                <li>
-                  Tailwind css (Twin.macro and emotion when working with React)
-                </li>
-              </span>
-            </div> */}
             <div>
               <span>
                 <li>Apache Tomcat</li>
