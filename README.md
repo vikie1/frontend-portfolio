@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# This is the code of frontend to my portfolio project
+This is the code that is serving<a href="https://victormwangi.netlify.app/"> my portfolio</a>. <br>
+It is a front end that is made with React js. I used <a href="https://tailwindcss.com/">TailwindCSS</a> for styling.<br>
+The TailwindCSS is intergrated with Emotion and React Styled components using <a href="https://github.com/ben-rogerson/twin.macro.git">twin.macro</a> <br>
+The project shows my ability to translate UI designs to actual code, working with React js, intergrating front end applications with CRUD backends through APIs - currently working with REST API.<br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The following are navigable links within the live version: 
+<ul>
+<li>{host}/ and {host}/home => this two will take you to the landing page</li>
+<li>{host}/contacts => This link will present to you a form that you can use to contact me </li>
+<li>{host}/about and {host}/victor-mwangi => This two will take you to a page that provides my resume, qualifications and skills</li>
+<li>{host}/projects => Here is where I provide links to the currently live projects</li>
+<li>{host}/articles => Here is a small section that contains blogs and articles I write</li>
+<li>{host}/article/:id/:name => You can use this to navigate to a specific article.</li>
+</ul>
 
-## Available Scripts
+# SETTING UP
 
-In the project directory, you can run:
+## Requirements
 
-### `yarn start`
+This is a react application created with npx create-react-app
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+You will need:
+<ul>
+<li>Node</li>
+<li>npm</li>
+<li>yarn</li>
+</ul>
+(You can use npm and yarn interchangeably from now on)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation
 
-### `yarn test`
+<ul>
+<li>$ git clone https://github.com/vikie1/frontend-portfolio.git => clone the repsitory</li>
+<li>$ cd frontend-portfolio => You shou see a yarn.lock/package-lock.json</li>
+<li>$ yarn install => this creates a node_modules folder with all the dependencies. (You can replace yarn with npm).</li>
+</ul>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Running
+By now you have all the dependacies installed and set up. To run it follow the following instructions: 
+<ul>
+<li>$ yarn start => This creates a local development server for testing</li>
+<li>$ yarn build => This creates an optimized production build. Due to tailwindcss, craco will be used to build.</li>
+<li>$ yarn serve => This will run the production server locally</li>
+</ul>
 
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
