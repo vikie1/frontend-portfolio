@@ -1,4 +1,4 @@
-# This is the code of frontend to my portfolio project
+# About this project
 This is the code that is serving<a href="https://victormwangi.netlify.app/"> my portfolio</a>. <br>
 It is a front end that is made with React js. I used <a href="https://tailwindcss.com/">TailwindCSS</a> for styling.<br>
 The TailwindCSS is intergrated with Emotion and React Styled components using <a href="https://github.com/ben-rogerson/twin.macro.git">twin.macro</a> <br>
