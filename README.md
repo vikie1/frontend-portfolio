@@ -30,19 +30,16 @@ You will need:
 
 ## Installation
 
-<ul>
-<li>$ git clone https://github.com/vikie1/frontend-portfolio.git => clone the repsitory</li>
-<li>$ cd frontend-portfolio => You shou see a yarn.lock/package-lock.json</li>
-<li>$ yarn install => this creates a node_modules folder with all the dependencies. (You can replace yarn with npm).</li>
-</ul>
+`$ git clone https://github.com/vikie1/frontend-portfolio.git` => clone the repsitory<br>
+`$ cd frontend-portfolio` => You shou see a yarn.lock/package-lock.json<br>
+`$ yarn install` => this creates a node_modules folder with all the dependencies. (You can replace yarn with npm).
 
 ## Running
 By now you have all the dependacies installed and set up. To run it follow the following instructions: 
-<ul>
-<li>$ yarn start => This creates a local development server for testing</li>
-<li>$ yarn build => This creates an optimized production build. Due to tailwindcss, craco will be used to build.</li>
-<li>$ yarn serve => This will run the production server locally</li>
-</ul>
+`$ yarn start` => This creates a local development server for testing<br>
+`$ yarn build` => This creates an optimized production build. Due to tailwindcss, craco will be used to build.<br>
+`$ yarn serve` => This will run the production server locally
+
 
 ## Learn More
 
