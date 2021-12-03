@@ -185,11 +185,11 @@ export const Contact = (props) => {
             <label htmlFor="message" css={labels}>
               Text:
             </label>
-            <span css={regularInputs} tw="p-0">
+            <span css={regularInputs} tw="p-3">
               <textarea
                 name="message"
-                cols="30"
-                rows="5"
+                cols="23"
+                rows="4"
                 css={inputs}
                 //tw="px-7 py-0.5"
                 tw="px-0"
@@ -210,7 +210,7 @@ export const Contact = (props) => {
               </button>
             )}
             {!isloading && !error && reply && (
-              <button css={button}>{reply}</button>
+              <button disabled css={button}>{reply}</button>
             )}
             {!isloading && error && !reply && (
               <button css={button}>{error}</button>

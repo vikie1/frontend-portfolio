@@ -11,8 +11,8 @@ export const NavBar = () => {
   return (
     <div tw="flex md:(flex flex-grow-0 w-max py-12 transition ease-out duration-500)">
       <nav tw="rounded fixed bg-transparent z-index[5]">
-        <ul tw="bg-gray-300 bg-opacity-25 backdrop-filter backdrop-blur-sm md:(bg-transparent mx-2 flex-col static w-max) fixed bottom-0 w-screen flex align-baseline justify-evenly">
-          <li tw="mt-5 pb-5 md:(pt-5 mt-auto) z-index[5]">
+        <ul tw="bg-gray-300 bg-opacity-25 backdrop-filter backdrop-blur-sm md:(bg-transparent h-full w-min mx-2 flex-col justify-center ) fixed bottom-0 w-screen flex align-baseline justify-evenly">
+          <li tw="mt-5 pb-5 md:(mt-0 mb-3 pb-0) z-index[5]">
             <Link to="/home" tw="">
               <span
                 className="icons"
@@ -24,7 +24,7 @@ export const NavBar = () => {
             </Link>
           </li>
 
-          <li tw="mt-5 pb-5 md:(mt-auto)">
+          <li tw="mt-5 pb-5 md:(mt-0 mb-3 pb-0)">
             <Link to="/articles">
               <span
                 className="icons"
@@ -36,7 +36,7 @@ export const NavBar = () => {
             </Link>
           </li>
 
-          <li tw="mt-5 pb-5 md:(mt-auto)">
+          <li tw="mt-5 pb-5 md:(mt-0 mb-3 pb-0)">
             <Link to="/projects">
               <span
                 className="icons"
@@ -48,7 +48,7 @@ export const NavBar = () => {
             </Link>
           </li>
 
-          <li tw="mt-5 pb-5 md:(mt-auto)">
+          <li tw="mt-5 pb-5 md:(mt-0 mb-3 pb-0)">
             <Link to="/about">
               <span
                 className="icons"
@@ -60,7 +60,7 @@ export const NavBar = () => {
             </Link>
           </li>
 
-          <li tw="mt-5 pb-5 md:(mt-auto)">
+          <li tw="mt-5 pb-5 md:(mt-0 mb-3 pb-0)">
             <Link to="/contacts">
               <span
                 className="icons"

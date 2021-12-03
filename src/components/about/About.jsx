@@ -58,7 +58,7 @@ export const About = (props) => {
         </section>
 
         <section tw="place-self-center text-center mx-1">
-          <div css={cards}><a href="/Victor Mwangi.pdf" download>Resume</a></div>
+          <div css={cards}><a href="/Victor Mwangi.pdf" tw="border-2 border-indigo-800 rounded" download>Resume</a></div>
         </section>
 
         <section tw="place-self-center mt-2 mx-2 md:(mx-auto)" css={cards}>
