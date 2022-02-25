@@ -8,7 +8,7 @@ export const Contact = (props) => {
   const [color, setColor] = useState("yellow");
   const [isloading, setLoading] = useState(false);
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("abc@example.ext");
+  const [email, setEmail] = useState("username@example.com");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
