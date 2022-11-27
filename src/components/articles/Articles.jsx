@@ -9,7 +9,7 @@ export const Articles = (props) => {
     data: articles,
     isLoading,
     error,
-  } = useFetch("https://pbvictor.herokuapp.com/api/blog");
+  } = useFetch("https://web-production-2b5d.up.railway.app/api/blog");
   // const {
   //   data: articles,
   //   isLoading,

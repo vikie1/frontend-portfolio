@@ -22,7 +22,7 @@ export const Contact = (props) => {
       return false;
     }
     const data = { name, email, subject, message };
-    const url = "https://pbvictor.herokuapp.com/api/contact";
+    const url = "https://web-production-2b5d.up.railway.app/api/contact";
     fetch(url, {
       method: "POST",
       headers: { 

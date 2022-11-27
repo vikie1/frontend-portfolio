@@ -12,7 +12,7 @@ export const Article = (props) => {
     data: blog,
     isLoading,
     error,
-  } = useFetch("https://pbvictor.herokuapp.com/api/blog/" + id);
+  } = useFetch("https://web-production-2b5d.up.railway.app/api/blog/" + id);
 
   //fine tuned card layout tweaks to use in this component
   const cardBody = css`

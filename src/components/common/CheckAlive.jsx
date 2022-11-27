@@ -9,7 +9,7 @@ export const CheckAlive = (props) => {
   useEffect(() => {
     const abortController = new AbortController();
 
-    fetch("https://pbvictor.herokuapp.com/hi", { signal: abortController.signal })
+    fetch("https://web-production-2b5d.up.railway.app/hi", { signal: abortController.signal })
       .then((res) => {
         if (!res.ok) {
           throw Error("Did not get data from server");

@@ -8,7 +8,7 @@ export const ProjectList = (props) => {
     data: projectList,
     isLoading,
     error,
-  } = useFetch("https://pbvictor.herokuapp.com/api/projects");
+  } = useFetch("https://web-production-2b5d.up.railway.app/api/projects");
 
   return (
     <div tw="absolute top-0 left-0 min-h-screen w-full bg-white">
